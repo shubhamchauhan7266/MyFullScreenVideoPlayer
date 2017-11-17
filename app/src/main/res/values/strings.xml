@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyFullScreenVideoPlayer</string>
+    <string name="player_error">Error initializing YouTube player</string>
+</resources>
