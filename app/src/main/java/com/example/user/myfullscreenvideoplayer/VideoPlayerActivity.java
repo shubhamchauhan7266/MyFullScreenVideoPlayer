@@ -12,6 +12,7 @@ import com.google.android.youtube.player.YouTubePlayerView;
 public class VideoPlayerActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
     private YouTubePlayerView mYouTubeView;
+    private YouTubePlayer mPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +25,13 @@ public class VideoPlayerActivity extends YouTubeBaseActivity implements YouTubeP
 
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean wasRestored) {
+        mPlayer=youTubePlayer;
+        mPlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.CHROMELESS);
         if (!wasRestored) {
-            youTubePlayer.cueVideo("fhWaJi1Hsfo"); // Plays https://www.youtube.com/watch?v=fhWaJi1Hsfo
+            youTubePlayer.cueVideo("IWQ57OmBF9I");
+            mPlayer.play();
         }
+        mPlayer.play();
     }
 
     @Override
