@@ -14,7 +14,6 @@ public class VideoPlayerActivity extends YouTubeBaseActivity implements YouTubeP
 
     private static final int RECOVERY_REQUEST = 1;
     private YouTubePlayerView mYouTubeView;
-    private YouTubePlayer mPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +26,11 @@ public class VideoPlayerActivity extends YouTubeBaseActivity implements YouTubeP
 
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean wasRestored) {
-        mPlayer = youTubePlayer;
-        mPlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.CHROMELESS);
+        youTubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.CHROMELESS);
         if (!wasRestored) {
-            mPlayer.loadVideo("IWQ57OmBF9I");
+            youTubePlayer.loadVideo("IWQ57OmBF9I");
         }
-        mPlayer.play();
+        youTubePlayer.play();
     }
 
     @Override
