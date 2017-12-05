@@ -1,7 +1,6 @@
 package com.example.user.myfullscreenvideoplayer;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -21,14 +20,13 @@ public class VideoPlayerActivity extends YouTubeBaseActivity implements YouTubeP
         setContentView(R.layout.activity_video_player);
         mYouTubeView = findViewById(R.id.youtube_view);
         mYouTubeView.initialize(Config.YOUTUBE_API_KEY, this);
-
     }
 
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean wasRestored) {
         youTubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.CHROMELESS);
         if (!wasRestored) {
-            youTubePlayer.loadVideo("IWQ57OmBF9I");
+            youTubePlayer.loadVideo("O3-hJuKpt8c");
         }
         youTubePlayer.play();
     }

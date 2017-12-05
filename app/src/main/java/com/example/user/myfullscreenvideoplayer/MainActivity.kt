@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         bt_play.setOnClickListener {
-            val intent=Intent(this,VideoPlayerActivity::class.java)
+            val intent=Intent(this@MainActivity,VideoPlayerActivity::class.java)
             startActivity(intent)
         }
 

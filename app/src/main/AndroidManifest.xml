@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".VideoPlayerActivity"
-            android:screenOrientation="landscape">
+            android:screenOrientation="portrait">
         </activity>
     </application>
 
